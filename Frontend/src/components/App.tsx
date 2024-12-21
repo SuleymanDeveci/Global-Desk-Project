@@ -1,7 +1,9 @@
+import Login from "../pages/Login/Login.tsx";
+
 function App() {
   return (
     <div>
-      <h1>APP</h1>
+      <Login />
     </div>
   );
 }

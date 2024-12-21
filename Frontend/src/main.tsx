@@ -1,11 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-// import App from "./components/App.tsx";
-import Login from "./pages/Login/Login.tsx";
+import App from "./components/App.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    {/* <App /> */}
-    <Login />
+    <App />
   </StrictMode>
 );

@@ -1,32 +1,24 @@
+import React from "react";
+import { observer } from "mobx-react-lite";
+import { loginStore } from "../../stores/loginStore.ts";
 import "./Login.css";
-import { useState } from "react";
 
-const Login: React.FC = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+const Login: React.FC = observer(() => {
+  const {
+    email,
+    password,
+    error,
+    setEmail,
+    setPassword,
+    setError,
+    validateForm,
+  } = loginStore;
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault(); // preventing page reload
 
-    const emailRegex = /^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+$/;
-
-    // Email validation
-    if (!emailRegex.test(email)) {
-      setError(
-        "Invalid email format, only letters (a-z), numbers(0-9), and periods(.) are allowed."
-      );
-      return;
-    }
-
-    // Password check
-    if (password.trim() === "") {
-      setError("Password cannot be empty");
-      return;
-    }
-
-    setError("");
-    console.log("Valid login:", email, " ", password);
+    // Validation
+    if (!validateForm()) return;
 
     //Mock API request
     try {
@@ -58,7 +50,9 @@ const Login: React.FC = () => {
             placeholder="name@example.com"
             type="email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
             className="input-field"
           />
         </div>
@@ -82,6 +76,6 @@ const Login: React.FC = () => {
       {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
   );
-};
+});
 
 export default Login;

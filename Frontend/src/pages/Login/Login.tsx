@@ -9,8 +9,24 @@ const Login: React.FC = () => {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault(); // preventing page reload
 
-    console.log(event);
-    console.log("Email:", email, "Password:", password);
+    const emailRegex = /^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+$/;
+
+    // Email validation
+    if (!emailRegex.test(email)) {
+      setError(
+        "Invalid email format, only letters (a-z), numbers(0-9), and periods(.) are allowed."
+      );
+      return;
+    }
+
+    // Password check
+    if (password.trim() === "") {
+      setError("Password cannot be empty");
+      return;
+    }
+
+    setError("");
+    console.log("Valid login:", email, " ", password);
   };
 
   return (

@@ -1,16 +1,20 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
 import { loginStore } from "../../stores/loginStore.ts";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 const Login: React.FC = observer(() => {
+  const navigate = useNavigate();
   const {
     email,
     password,
     error,
+    disableLoginButton,
     setEmail,
     setPassword,
     setError,
+    setLoginButtonDisabled,
     validateForm,
   } = loginStore;
 
@@ -30,7 +34,7 @@ const Login: React.FC = observer(() => {
 
       if (response.status === 200) {
         alert("Login successful!");
-        // GO TO MAIN PAGE
+        navigate("/home");
       } else {
         setError("Invalid credentials. Please try again.");
       }
@@ -52,6 +56,7 @@ const Login: React.FC = observer(() => {
             value={email}
             onChange={(e) => {
               setEmail(e.target.value);
+              setLoginButtonDisabled(false);
             }}
             className="input-field"
           />
@@ -61,14 +66,17 @@ const Login: React.FC = observer(() => {
           <input
             type="password"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => {
+              setPassword(e.target.value);
+              setLoginButtonDisabled(false);
+            }}
             className="input-field"
           />
         </div>
         <button
           type="submit"
           className="login-button"
-          disabled={!email || !password}
+          disabled={disableLoginButton}
         >
           Login
         </button>

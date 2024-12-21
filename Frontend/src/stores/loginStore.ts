@@ -4,6 +4,7 @@ class LoginStore {
   email = "";
   password = "";
   error = "";
+  disableLoginButton = false;
 
   constructor() {
     makeAutoObservable(this);
@@ -29,16 +30,21 @@ class LoginStore {
     this.error = "";
   };
 
+  setLoginButtonDisabled = (takenButtonStatus: boolean) => {
+    this.disableLoginButton = takenButtonStatus;
+  };
+
   validateForm = () => {
     const emailRegex = /^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+$/;
     if (!emailRegex.test(this.email)) {
-      console.log(this.email);
+      this.setLoginButtonDisabled(true);
       this.setError(
         "Invalid email format, only letters (a-z), numbers(0-9), and periods(.) are allowed."
       );
       return false;
     }
     if (this.password.trim() === "") {
+      this.setLoginButtonDisabled(true);
       this.setError("Password cannot be empty");
       return false;
     }

@@ -6,7 +6,7 @@ const Login: React.FC = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault(); // preventing page reload
 
     const emailRegex = /^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+$/;
@@ -27,6 +27,25 @@ const Login: React.FC = () => {
 
     setError("");
     console.log("Valid login:", email, " ", password);
+
+    //Mock API request
+    try {
+      const response = await fetch("http://localhost:5000/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (response.status === 200) {
+        alert("Login successful!");
+        // GO TO MAIN PAGE
+      } else {
+        setError("Invalid credentials. Please try again.");
+      }
+    } catch (errorAPI) {
+      setError("An error occurred. Please try again later.");
+      console.log(errorAPI);
+    }
   };
 
   return (

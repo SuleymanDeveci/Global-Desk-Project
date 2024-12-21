@@ -2,8 +2,8 @@ import "./Login.css";
 import { useState } from "react";
 
 const Login: React.FC = () => {
-  const [email, setEmail] = useState("suleyman@test");
-  const [password, setPassword] = useState("123");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
   const handleSubmit = (event: React.FormEvent) => {
@@ -36,6 +36,7 @@ const Login: React.FC = () => {
         <div>
           <label>Email:</label>
           <input
+            placeholder="name@example.com"
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}

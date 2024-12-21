@@ -39,7 +39,6 @@ const Login: React.FC = () => {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            required
             className="input-field"
           />
         </div>
@@ -52,7 +51,11 @@ const Login: React.FC = () => {
             className="input-field"
           />
         </div>
-        <button type="submit" className="login-button">
+        <button
+          type="submit"
+          className="login-button"
+          disabled={!email || !password}
+        >
           Login
         </button>
       </form>

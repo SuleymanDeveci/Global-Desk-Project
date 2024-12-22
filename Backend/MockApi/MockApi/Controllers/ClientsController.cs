@@ -14,7 +14,7 @@ namespace MockApi.Controllers
             {
                 new Client
                 {
-                    Name = "Süleyman Deveci",
+                    Name = "Suleyman Deveci",
                     Nationality = "Turkish",
                     Occupation = "Computer Engineer",
                     Email = "suleymandeveci1907@gmail.com"

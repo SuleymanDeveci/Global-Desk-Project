@@ -22,14 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-.vs/
-
-# Dotnet generated files
-**/bin/
-**/obj/
-/bin/
-obj/
+.vs
 
 # Windows Installer files
 Thumbs.db
 Desktop.ini
+
+# Dotnet generated files
+/Backend/MockApi/.vs
+*.bin

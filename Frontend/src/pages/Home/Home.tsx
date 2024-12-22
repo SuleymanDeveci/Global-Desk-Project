@@ -13,9 +13,9 @@ const Home: React.FC = () => {
   useEffect(() => {
     const fetchClients = async () => {
       try {
-        const response = await fetch("http://localhost:7046/api/clients");
+        const response = await fetch("https://localhost:7046/api/Clients");
         if (!response.ok) {
-          throw new Error("Failed to fetch clients");
+          throw new Error("Failed to fetch clients DEBUG DEBUG");
         }
         const data = await response.json();
         setClients(data);

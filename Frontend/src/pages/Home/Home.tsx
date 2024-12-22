@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Home.css";
 
 type Client = {
   name: string;
@@ -27,24 +28,24 @@ const Home: React.FC = () => {
     fetchClients();
   }, []);
   return (
-    <div>
-      <h1>Client List</h1>
-      <table className="table">
+    <div className="main-cont">
+      <h1 className="title">CLIENT LIST</h1>
+      <table className="client-table">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Nationality</th>
-            <th>Occupation</th>
-            <th>Email</th>
+            <th className="th1">Name</th>
+            <th className="th2">Nationality</th>
+            <th className="th3">Occupation</th>
+            <th className="th4">Email</th>
           </tr>
         </thead>
         <tbody>
           {clients.map((client, index) => (
             <tr key={index}>
-              <td>{client.name}</td>
-              <td>{client.nationality}</td>
-              <td>{client.occupation}</td>
-              <td>{client.email}</td>
+              <td className="td1">{client.name}</td>
+              <td className="td2">{client.nationality}</td>
+              <td className="td3">{client.occupation}</td>
+              <td className="td4">{client.email}</td>
             </tr>
           ))}
         </tbody>

@@ -1,30 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { observer } from "mobx-react-lite";
+import { homeStore } from "../../stores/homeStore";
 import "./Home.css";
 
-type Client = {
-  name: string;
-  nationality: string;
-  occupation: string;
-  email: string;
-};
-
-const Home: React.FC = () => {
-  const [clients, setClients] = useState<Client[]>([]);
+const Home: React.FC = observer(() => {
+  const { clients, fetchClients } = homeStore;
 
   useEffect(() => {
-    const fetchClients = async () => {
-      try {
-        const response = await fetch("https://localhost:7046/api/Clients");
-        if (!response.ok) {
-          throw new Error("Failed to fetch clients DEBUG DEBUG");
-        }
-        const data = await response.json();
-        setClients(data);
-      } catch (error: any) {
-        console.log(error);
-      }
-    };
-
     fetchClients();
   }, []);
   return (
@@ -52,6 +34,6 @@ const Home: React.FC = () => {
       </table>
     </div>
   );
-};
+});
 
 export default Home;

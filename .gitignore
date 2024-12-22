@@ -31,3 +31,5 @@ Desktop.ini
 # Dotnet generated files
 /Backend/MockApi/.vs
 *.bin
+/Backend/MockApi/MockApi/obj
+/Backend/MockApi/MockApi/bin

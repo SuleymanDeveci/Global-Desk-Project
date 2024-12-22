@@ -26,7 +26,7 @@ const Login: React.FC = observer(() => {
 
     //Mock API request
     try {
-      const response = await fetch("http://localhost:5000/api/login", {
+      const response = await fetch("https://localhost:7046/api/Auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -35,7 +35,7 @@ const Login: React.FC = observer(() => {
       if (response.status === 200) {
         alert("Login successful!");
         navigate("/home");
-      } else {
+      } else if (response.status === 401) {
         setError("Invalid credentials. Please try again.");
       }
     } catch (errorAPI) {

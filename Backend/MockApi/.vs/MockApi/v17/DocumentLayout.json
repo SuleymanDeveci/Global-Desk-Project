@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Suleyman\\Documents\\VSCODE\\WebSite1\\Github\\Global-Desk-Project\\Backend\\MockApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3DA45A21-2447-4880-BA66-30BF94CBBF96}|MockApi\\MockApi.csproj|c:\\users\\suleyman\\documents\\vscode\\website1\\github\\global-desk-project\\backend\\mockapi\\mockapi\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DA45A21-2447-4880-BA66-30BF94CBBF96}|MockApi\\MockApi.csproj|solutionrelative:mockapi\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3DA45A21-2447-4880-BA66-30BF94CBBF96}|MockApi\\MockApi.csproj|c:\\users\\suleyman\\documents\\vscode\\website1\\github\\global-desk-project\\backend\\mockapi\\mockapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3DA45A21-2447-4880-BA66-30BF94CBBF96}|MockApi\\MockApi.csproj|solutionrelative:mockapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,6 +27,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ClientsController.cs",
+              "DocumentMoniker": "C:\\Users\\Suleyman\\Documents\\VSCODE\\WebSite1\\Github\\Global-Desk-Project\\Backend\\MockApi\\MockApi\\Controllers\\ClientsController.cs",
+              "RelativeDocumentMoniker": "MockApi\\Controllers\\ClientsController.cs",
+              "ToolTip": "C:\\Users\\Suleyman\\Documents\\VSCODE\\WebSite1\\Github\\Global-Desk-Project\\Backend\\MockApi\\MockApi\\Controllers\\ClientsController.cs",
+              "RelativeToolTip": "MockApi\\Controllers\\ClientsController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAswDAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T00:42:12.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Suleyman\\Documents\\VSCODE\\WebSite1\\Github\\Global-Desk-Project\\Backend\\MockApi\\MockApi\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "MockApi\\Controllers\\AuthController.cs",
@@ -35,7 +52,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Suleyman\\Documents\\VSCODE\\WebSite1\\Github\\Global-Desk-Project\\Backend\\MockApi\\MockApi\\Program.cs",
               "RelativeDocumentMoniker": "MockApi\\Program.cs",
@@ -43,8 +60,7 @@
               "RelativeToolTip": "MockApi\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T22:58:45.601Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T22:58:45.601Z"
             }
           ]
         }

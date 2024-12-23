@@ -33,7 +33,6 @@ const Login: React.FC = observer(() => {
       });
 
       if (response.status === 200) {
-        alert("Login successful!");
         navigate("/home");
       } else if (response.status === 401) {
         setLoginButtonDisabled(true);
@@ -41,7 +40,7 @@ const Login: React.FC = observer(() => {
       }
     } catch (errorAPI) {
       setError("An error occurred. Please try again later.");
-      console.log(errorAPI);
+      alert("An error occurred. Please try again later.");
     }
   };
 

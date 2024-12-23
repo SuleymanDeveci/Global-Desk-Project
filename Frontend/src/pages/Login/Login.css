@@ -12,11 +12,14 @@ body {
   background-color: #dfdfdf;
 }
 .main-container {
+  align-self: center;
+  justify-self: center;
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 400px;
   height: 600px;
+  margin-top: 50px;
 }
 
 .main-container h2 {

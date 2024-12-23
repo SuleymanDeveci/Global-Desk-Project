@@ -36,6 +36,7 @@ const Login: React.FC = observer(() => {
         alert("Login successful!");
         navigate("/home");
       } else if (response.status === 401) {
+        setLoginButtonDisabled(true);
         setError("Invalid credentials. Please try again.");
       }
     } catch (errorAPI) {

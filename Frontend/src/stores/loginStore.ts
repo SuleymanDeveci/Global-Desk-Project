@@ -4,7 +4,7 @@ class LoginStore {
   email = "";
   password = "";
   error = "";
-  disableLoginButton = false;
+  disableLoginButton = true;
 
   constructor() {
     makeAutoObservable(this);

@@ -52,3 +52,7 @@ Frontend & Backend Development Homework Assignment
 - if you get any error or you have any question
 - suleymandeveci1907@gmail.com
 - 05338806699
+
+# Github
+
+- the github repository of this project https://github.com/SuleymanDeveci/Global-Desk-Project

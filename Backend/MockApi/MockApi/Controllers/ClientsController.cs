@@ -54,9 +54,9 @@ namespace MockApi.Controllers
 
     public class Client
     {
-        public string Name { get; set; }
-        public string Nationality { get; set; }
-        public string Occupation { get; set; }
-        public string Email { get; set; }
+        public required string Name { get; set; }
+        public required string Nationality { get; set; }
+        public required string Occupation { get; set; }
+        public required string Email { get; set; }
     }
 }

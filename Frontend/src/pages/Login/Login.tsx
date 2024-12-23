@@ -49,10 +49,9 @@ const Login: React.FC = observer(() => {
     <div className="main-container">
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>Email:</label>
+        <div className="input-box">
           <input
-            placeholder="name@example.com"
+            placeholder="Email"
             type="email"
             value={email}
             onChange={(e) => {
@@ -62,9 +61,9 @@ const Login: React.FC = observer(() => {
             className="input-field"
           />
         </div>
-        <div>
-          <label>Password:</label>
+        <div className="input-box">
           <input
+            placeholder="Password"
             type="password"
             value={password}
             onChange={(e) => {
@@ -74,15 +73,19 @@ const Login: React.FC = observer(() => {
             className="input-field"
           />
         </div>
-        <button
-          type="submit"
-          className="login-button"
-          disabled={disableLoginButton}
-        >
-          Login
-        </button>
+        <div className="button-box">
+          <button
+            type="submit"
+            className="login-button"
+            disabled={disableLoginButton}
+          >
+            Sign In
+          </button>
+        </div>
       </form>
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      <div className="error-box">
+        {error && <p style={{ color: "red" }}>{error}</p>}
+      </div>
     </div>
   );
 });

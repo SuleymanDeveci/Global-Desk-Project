@@ -26,7 +26,7 @@ const Login: React.FC = observer(() => {
 
     //Mock API request
     try {
-      const response = await fetch("https://localhost:7046/api/Auth/login", {
+      const response = await fetch("http://localhost:5050/api/Auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

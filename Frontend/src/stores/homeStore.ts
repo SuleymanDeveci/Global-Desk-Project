@@ -20,7 +20,7 @@ class HomeStore {
 
   fetchClients = async () => {
     try {
-      const response = await fetch("https://localhost:7046/api/Clients");
+      const response = await fetch("http://localhost:5050/api/Clients");
       if (!response.ok) {
         throw new Error("Failed to fetch clients DEBUG DEBUG");
       }

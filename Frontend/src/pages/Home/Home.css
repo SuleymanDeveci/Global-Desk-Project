@@ -28,6 +28,7 @@
   border-bottom-right-radius: 58px;
   border-top-left-radius: 58px;
   overflow: hidden;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.35);
 }
 
 .client-table tr {

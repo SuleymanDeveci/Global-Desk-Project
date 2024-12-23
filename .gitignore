@@ -29,7 +29,7 @@ Thumbs.db
 Desktop.ini
 
 # Dotnet generated files
-/Backend/MockApi/.vs
-*.bin
-/Backend/MockApi/MockApi/obj
-/Backend/MockApi/MockApi/bin
+/Backend/MockApi/.vs/
+/Backend/MockApi/MockApi/obj/
+/Backend/MockApi/MockApi/bin/
+

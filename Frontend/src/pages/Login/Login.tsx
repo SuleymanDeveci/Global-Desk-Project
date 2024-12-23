@@ -82,9 +82,7 @@ const Login: React.FC = observer(() => {
           </button>
         </div>
       </form>
-      <div className="error-box">
-        {error && <p style={{ color: "red" }}>{error}</p>}
-      </div>
+      <div className="error-box">{error && <p>{error}</p>}</div>
     </div>
   );
 });

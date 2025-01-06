@@ -57,7 +57,7 @@ const Login: React.FC = observer(() => {
               setEmail(e.target.value);
               setLoginButtonDisabled(false);
             }}
-            className="input-field"
+            className="input-field-email"
           />
         </div>
         <div className="input-box">
@@ -69,7 +69,7 @@ const Login: React.FC = observer(() => {
               setPassword(e.target.value);
               setLoginButtonDisabled(false);
             }}
-            className="input-field"
+            className="input-field-password"
           />
         </div>
         <div className="button-box">
